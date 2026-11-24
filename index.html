@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ec">
+  <meta name="description" content="Demo formulir permintaan akses CV sebelum melihat contoh CV.">
+  <title>Permintaan Akses CV — Ran Astuti</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Ran Astuti, beranda">
+      <span class="wordmark-mark">R</span>
+      <span>ran.astuti</span>
+    </a>
+    <div class="header-note"><span class="status-dot"></span> CV ACCESS / DEMO</div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span>01</span> — PERMINTAAN CV</p>
+        <h1 id="page-title">Sebelum melihat CV, boleh kenalan dulu?</h1>
+        <p class="intro-lede">Ceritakan sedikit tentang diri dan keperluan Anda. Saya ingin tahu siapa yang mengakses CV dan untuk keperluan apa.</p>
+
+        <div class="privacy-note">
+          <span class="privacy-icon" aria-hidden="true">↗</span>
+          <div>
+            <h2>Privasi tetap dijaga</h2>
+            <p>Informasi pada form digunakan hanya untuk menindaklanjuti permintaan CV. Tidak ada akun atau langganan.</p>
+          </div>
+        </div>
+
+        <p class="aside-caption">FORM INI ADALAH PROTOTIPE</p>
+        <p class="aside-copy">Data yang Anda masukkan tidak dikirim atau disimpan. Setelah form valid, halaman akan membuka CV contoh.</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-heading">
+          <div>
+            <p class="eyebrow">CV REQUEST <span class="required-legend">* WAJIB DIISI</span></p>
+            <h2>Detail permintaan</h2>
+          </div>
+          <span class="form-index">01 / 01</span>
+        </div>
+
+        <form id="request-form">
+          <div class="field-grid">
+            <label class="field">
+              <span>Nama lengkap <b aria-hidden="true">*</b></span>
+              <input name="name" autocomplete="name" placeholder="Nama Anda" required>
+            </label>
+            <label class="field">
+              <span>Email <b aria-hidden="true">*</b></span>
+              <input name="email" type="email" autocomplete="email" placeholder="nama@perusahaan.com" required>
+            </label>
+            <label class="field">
+              <span>Nomor WhatsApp <b aria-hidden="true">*</b></span>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="+62 812 3456 7890" required>
+            </label>
+            <label class="field">
+              <span>Perusahaan <b aria-hidden="true">*</b></span>
+              <input name="company" autocomplete="organization" placeholder="Nama perusahaan" required>
+            </label>
+            <label class="field">
+              <span>Jabatan / profesi <b aria-hidden="true">*</b></span>
+              <input name="occupation" autocomplete="organization-title" placeholder="Contoh: Talent Acquisition" required>
+            </label>
+            <label class="field">
+              <span>Keperluan meminta CV <b aria-hidden="true">*</b></span>
+              <select name="reason" required>
+                <option value="" selected disabled>Pilih keperluan</option>
+                <option>Rekrutmen / peluang kerja</option>
+                <option>Kolaborasi profesional</option>
+                <option>Referensi atau keperluan lain</option>
+              </select>
+            </label>
+            <label class="field field-wide">
+              <span>Profil LinkedIn <small>OPSIONAL</small></span>
+              <input name="linkedin" type="url" autocomplete="url" placeholder="https://linkedin.com/in/nama-anda">
+            </label>
+            <label class="field field-wide">
+              <span>Pesan singkat <small>OPSIONAL</small></span>
+              <textarea name="message" rows="3" placeholder="Tambahkan konteks jika diperlukan"></textarea>
+            </label>
+          </div>
+
+          <label class="consent">
+            <input name="consent" type="checkbox" required>
+            <span>Saya setuju informasi ini digunakan untuk menindaklanjuti permintaan CV. <a href="#privacy">Baca catatan privasi</a>.</span>
+          </label>
+          <button class="submit-button" type="submit">
+            <span>Kirim permintaan</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <p class="form-footnote">DEMO LOKAL · TIDAK ADA DATA YANG DIKIRIM</p>
+        </form>
+
+        <section id="success-panel" class="success-panel" aria-live="polite" hidden>
+          <span class="success-mark" aria-hidden="true">✓</span>
+          <p class="eyebrow">PERMINTAAN DITERIMA</p>
+          <h3 tabindex="-1">Terima kasih sudah mengisi.</h3>
+          <p>Untuk demo ini, Anda bisa langsung membuka halaman CV contoh.</p>
+          <button id="show-cv" class="submit-button" type="button">
+            <span>Lihat CV contoh</span>
+            <span class="button-arrow" aria-hidden="true">↓</span>
+          </button>
+          <button id="edit-request" class="text-button" type="button">Kembali ke form</button>
+        </section>
+      </div>
+    </section>
+
+    <section id="cv-demo" class="cv-demo" aria-labelledby="cv-title" hidden>
+      <div class="cv-topline">
+        <span>CONTOH CV / DEMO</span>
+        <span>BUKAN DOKUMEN ASLI</span>
+      </div>
+      <div class="cv-sheet">
+        <div class="cv-header">
+          <div>
+            <p class="eyebrow">SEO · DIGITAL GROWTH</p>
+            <h2 id="cv-title">Ran Astuti</h2>
+            <p class="cv-subtitle">SEO Specialist &amp; Digital Growth Architect</p>
+          </div>
+          <span class="cv-monogram">R.</span>
+        </div>
+        <div class="cv-rule"></div>
+        <div class="cv-columns">
+          <div>
+            <h3>Profil</h3>
+            <p>Contoh ringkas profil profesional. Ganti bagian ini dengan ringkasan CV Anda.</p>
+            <h3>Pengalaman</h3>
+            <p><strong>SEO Specialist</strong><br>Contoh Perusahaan · 2022—sekarang</p>
+            <p>Mengelola strategi SEO, riset konten, dan pertumbuhan organik lintas kanal.</p>
+          </div>
+          <div>
+            <h3>Keahlian</h3>
+            <ul><li>Strategi SEO</li><li>Analisis data</li><li>Content planning</li><li>Digital growth</li></ul>
+            <h3>Pendidikan</h3>
+            <p>Contoh program studi<br>Universitas Contoh · 2018—2022</p>
+          </div>
+        </div>
+        <p class="cv-disclaimer">CV contoh ini berisi data fiktif dan hanya untuk memperlihatkan alur demo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="privacy" class="site-footer">
+    <p>DEMO FORM AKSES CV <span>·</span> TANPA BACKEND</p>
+    <a href="https://ranastuti.com/">ranastuti.com ↗</a>
+    <p class="footer-privacy">Tidak ada data form yang dikirim atau disimpan pada demo ini.</p>
+  </footer>
+</body>
+</html>
